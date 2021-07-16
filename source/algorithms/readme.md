@@ -1,3 +1,4 @@
+<h3>Anotações</h3>
 
 Compilar: `gcc hello_world.c -o hello_world`
 
@@ -43,9 +44,9 @@ Atribuição simplificada: `+=` `-=` `*=` `/=` `%=`
 
 *Operador Ternário:* `Condição ? Expressão1 : Expressão2`
 
-**switch:**
+**Controles de Fluxo**
 
-variável int ou char.
+`switch`: aceita variável int ou char.
 
 ```
 switch(variável):
@@ -71,15 +72,14 @@ permite executar repetidamente um conjunto de comandos.
 **Array/Vetor:**
 
 Um conjunto de dados armazenado de forma sequencial
-- O nome do vetor é um ponteiro para o endereço do vetor para a primeira posição.
-- Para saber a capacidade máxima do vetor basta dividir o seu tamanho pelo tamanho do tipo que ele armazena semelhante a função.
+- O nome do vetor é um ponteiro para o endereço da primeira posição.
+- Para saber a capacidade máxima do vetor basta dividir o seu tamanho pelo tamanho do tipo que ele armazena.
 
 ```
 int vet[5];
 int len = sizeof(vet) / sizeof(int);
 ```
 
-- É possível acessar o endereço de um elemento do array
 - A Linguagem C permite a declaração de um array de ponteiros.
 
 
@@ -132,7 +132,13 @@ tipo (tipo *paramentros){
 }
 ```
 
-- `Recursão`: quando utilizar funções recursivas prestar atenção no critério de parada e no parâmetro de chamada da função.
+*Recursão:*
+
+Sempre que a gente chama uma função, quem chamou a função é pausado a função é executada e quando a função termina o programa continua da onde parou.
+
+- Quando utilizar funções recursivas prestar atenção no critério de parada e no parâmetro de chamada da função.
+- A ideia básica da recursão é dividir para conquistar, criando uma generalização do problema.
+- Algoritmos recursivos tendem a necessitar de mais tempo e memória do que algoritmos interativos
 
 *Retorno da função*
 - Tipos basicos.

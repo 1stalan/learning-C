@@ -1,34 +1,31 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
-#define L 3
-#define C 2
+#include <stdlib.h>
+#define L 3 // linha
+#define C 2 // coluna
+
+void imprime_matriz(float mat[][C], int n)
+{
+    /* array com mais dimensões, precisa da informação das outras dimensões */
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < C; j++)
+        {
+            printf("[%.1f] ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
 
 int main()
 {
-    int linha, coluna;
-    
+
     float notas[L][C] = {
         {7.5, 8.6},
         {6.5, 7.7},
         {5.6, 7.8},
     };
-    
-    for(linha = 0; linha < L; linha ++){
-        printf("#%d | ", linha);
-        for(coluna = 0; coluna < C; coluna ++){
-            printf("%.1f | ", notas[linha][coluna]);
-        }
-        printf("\n");
-    }
-    
-    printf("\nValor da linha 1 coluna 2: %.1f", notas[1][1]);
-    
+
+    imprime_matriz(notas, L);
+
     return 0;
 }
