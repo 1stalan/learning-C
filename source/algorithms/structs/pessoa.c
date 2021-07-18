@@ -10,12 +10,12 @@ struct pessoa
 int main()
 {
     struct pessoa ps[4] =
-    {
-        {"Alan", {"Joanésia "}, 28, 1},
-        {"Regina Emanuelly", {"Rua Cedro Condomínio"}, 35, 959},
-        {"Vicente Francisco", {"Rua Bela Flor"}, 40, 201},
-        {"Caroline Sebastiana", {"Passagem K Gouveia"}, 22, 720},
-    };
+        {
+            {"Alan", {"Joanésia "}, 28, 1},
+            {"Regina Emanuelly", {"Rua Cedro Condomínio"}, 35, 959},
+            {"Vicente Francisco", {"Rua Bela Flor"}, 40, 201},
+            {"Caroline Sebastiana", {"Passagem K Gouveia"}, 22, 720},
+        };
 
     strcat(ps[0].nome, " Santos");
 
@@ -28,8 +28,6 @@ int main()
 
         printf("\n\n");
     }
-    
-
 
     return 0;
 }

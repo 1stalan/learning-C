@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include <stdlib.h>
 
-
-
 void imprime_vetor(int *vet, int n)
 {
     //arrays são sempre passados por referência

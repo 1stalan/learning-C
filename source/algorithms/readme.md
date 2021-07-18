@@ -152,14 +152,21 @@ Para acessar o valor da variável apontada por um ponteiro basta usar o operador
 - As operações aritméticas nos ponteiros respeitam o tamanho do tipo.
 - Ponteiros podem ser comparados.
 - A linguagem C permite criar ponteiros, com diferentes níveis de apontamento.
+- Apenas operações de soma e subtração são permitidas em um ponteiro.
 
 *Ponteiro genérico:*
-
+- A linguagem c permite criar ponteiros com diferentes níveis de apontamento `*pto` `**pto` `***pto`.
 - Um ponteiro genérico pode apontar para qualquer tipo de dados.
-- Antes de acessar um o valor do ponteiro genérico e necessário fazer um cast `*(int *)`.
+- Antes de acessar um o valor do ponteiro genérico e necessário fazer um cast `*(int *) pto`.
+
 
 **Alocação Dinâmica:**
-
+| tipo  | bytes |
+|-------|-------|
+| char  |   1   | 
+| int   |   4   |
+| float |   4   |
+| double|   8   |  
 a Linguagem C ANSI usa apenas 4 funções para alocação dinâmica disponíveis na biblioteca `<stdlib.h>`.
 
 - `sizeof` retorna o número de bytes necessário para alocar um único elemento do tipo de dado recebido.
@@ -175,6 +182,33 @@ se o ponteiro para o bloco de memória for NULL a função realloc vai alocar me
 
 - `free` libera a memória.
 
-*Tipo de retorno da alocação:*
-_ponteiro para a primeira posição do array
-NULL: caso aconteça algum erro na alocação_
+*Retorno da alocação:*
+- ponteiro para a primeira posição do array
+- NULL: caso aconteça algum erro na alocação
+
+**Arquivos**
+- `fopen()`: fopen(char * nome, modo *) abre um arquivo em modo de leitura ou escrita.
+- `fclose()`: A função fclose() fecha um arquivo.
+- `fputc()`: escreve um único caractere no arquivo.
+- `fgetc()`: le um único caractere do arquivo por vez.
+- `EOF`: end of file.
+
+A linguagem C trabalho com apenas arquivos texto e binários e sempre que trabalhamos com arquivos, devemos fechá-lo o path do arquivo pode ser:
+
+_absoluto (endereço completo)
+relativo (relativo à pasta do programa)_
+
+
+*Texto:*
+- Os dados são gravados como seriam impressos na tela.
+- Existe uma etapa de conversão dos dados.
+- Arquivos maiores, leitura e escrita mais lenta.
+- Cada digito será convertido para seu caractere ASCII.
+
+*Binário:*
+- Os dados são copiados da memória para o arquivo da maneira que estão organizados na memoria.
+- Arquivos menores, leitura e escrita rápida.
+
+
+
+
