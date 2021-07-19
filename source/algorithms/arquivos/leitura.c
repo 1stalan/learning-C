@@ -12,7 +12,9 @@ int main()
 
     printf("======================================\n");
     char nome = fgetc(arq);
-    while (nome != EOF)
+
+    // while (nome != EOF)
+    while (!feof(arq))
     {
         printf("%c", nome);
         nome = fgetc(arq);

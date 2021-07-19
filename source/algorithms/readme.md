@@ -187,11 +187,18 @@ se o ponteiro para o bloco de memória for NULL a função realloc vai alocar me
 - NULL: caso aconteça algum erro na alocação
 
 **Arquivos**
-- `fopen()`: fopen(char * nome, modo *) abre um arquivo em modo de leitura ou escrita.
-- `fclose()`: A função fclose() fecha um arquivo.
-- `fputc()`: escreve um único caractere no arquivo.
-- `fgetc()`: le um único caractere do arquivo por vez.
-- `EOF`: end of file.
+
+`FILE *arquivo`
+
+- `fopen`: fopen(char * nome, modo *) abre um arquivo em modo de leitura ou escrita.
+- `fclose`: A função fclose() fecha um arquivo.
+- `fputc`: Escreve um único caractere no arquivo.
+- `fputs`: Escreve uma string no arquivo.
+- `fgetc`: Lê um único caractere do arquivo por vez.
+- `fgets`: Lê uma string do arquivo por vez.
+- `feof`: 0 se ainda não estiver atingido o final do arquivo.
+- `fwrite`: Escreve um bloco de dados.
+- `EOF`: End of file.
 
 A linguagem C trabalho com apenas arquivos texto e binários e sempre que trabalhamos com arquivos, devemos fechá-lo o path do arquivo pode ser:
 
@@ -208,6 +215,7 @@ relativo (relativo à pasta do programa)_
 *Binário:*
 - Os dados são copiados da memória para o arquivo da maneira que estão organizados na memoria.
 - Arquivos menores, leitura e escrita rápida.
+- A constante EOF pode ser lida como inteiro.
 
 
 
