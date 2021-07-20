@@ -1,5 +1,5 @@
 
 **indice**
 
-[Anotações](source\algorithms\readme.md)
+[Anotações](source/algorithms/readme.md)
 

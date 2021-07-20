@@ -167,7 +167,8 @@ Para acessar o valor da variável apontada por um ponteiro basta usar o operador
 | int   |   4   |
 | float |   4   |
 | double|   8   |  
-a Linguagem C ANSI usa apenas 4 funções para alocação dinâmica disponíveis na biblioteca `<stdlib.h>`.
+
+A Linguagem C ANSI usa apenas 4 funções para alocação dinâmica disponíveis na biblioteca `<stdlib.h>`.
 
 - `sizeof` retorna o número de bytes necessário para alocar um único elemento do tipo de dado recebido.
 - `malloc` a função malloc recebe por parâmetro a quantidade de bytes a ser alocada e retornar:
@@ -197,8 +198,20 @@ se o ponteiro para o bloco de memória for NULL a função realloc vai alocar me
 - `fgetc`: Lê um único caractere do arquivo por vez.
 - `fgets`: Lê uma string do arquivo por vez.
 - `feof`: 0 se ainda não estiver atingido o final do arquivo.
-- `fwrite`: Escreve um bloco de dados.
+- `fwrite`: Escreve um bloco de bytes.
+- `fread`: lê um bloco de bytes.
+- `fscanf`: lê um bloco de bytes.
+- `fprintf`: Escreve saida no arquivo.
+- `fseek`: Define a posição do arquivo do fluxo para o deslocamento fornecido.
+- `rewind`: Volta para o início do arquivo.
 - `EOF`: End of file.
+
+| Constante  | Valor | Significado           |
+|------------|-------|-----------------------|
+| SEEK_SET   |   0   | Início do arquivo     |
+| SEEK_CUR   |   1   | Ponto atual no arquivo|
+| SEEK_END   |   2   | Fim do arquivo        |
+
 
 A linguagem C trabalho com apenas arquivos texto e binários e sempre que trabalhamos com arquivos, devemos fechá-lo o path do arquivo pode ser:
 
