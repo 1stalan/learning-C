@@ -131,6 +131,14 @@ tipo (tipo *paramentros){
     comandos;
 }
 ```
+[Função main](source/funcoes/function_main.c)
+
+- `argc`: valor que indica o número de parâmetros com os quais a função `main()` foi chamada `(argc >= 1)`.
+
+- `*argv`: ponteiro para um vetor contendo "argc" strings. Cada string é um dos parâmetros para `main()`. 
+- `argv[0]`: sempre aponta para o nome do programa.
+
+- `atoi`: Converte string para inteiro.
 
 *Recursão:*
 
@@ -232,4 +240,17 @@ relativo (relativo à pasta do programa)_
 
 
 
+**localidade**
 
+- `setlocale`: é uma das macros de localidade do sistema
+- `LC_ALL`: Afeta todo o local da linguagem 
+- `LC_COLLATE`: Afeta as funções `strcoll` e `strxfrm` que trabalham com strings
+- `LC_CTYPE`: Afeta  as funções que trabalham com caracteres
+- `LC_MONETARY`: Afeta as informações monetárias
+- `LC_NUMERIC`: Afeta a formatação numérica
+- `LC_TIME`: Afeta a função de formatação de data e hora `strftime`
+
+ 
+*local* é um valor específico do sistema.
+- `"C"` para a localidade mínima da linguagem
+- `""` localidade padrao so sistema
