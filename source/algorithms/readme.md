@@ -166,7 +166,20 @@ Para acessar o valor da variável apontada por um ponteiro basta usar o operador
 - A linguagem c permite criar ponteiros com diferentes níveis de apontamento `*pto` `**pto` `***pto`.
 - Um ponteiro genérico pode apontar para qualquer tipo de dados.
 - Antes de acessar um o valor do ponteiro genérico e necessário fazer um cast `*(int *) pto`.
+ 
+*Ponteiro para função*
 
+Permite a criação de códigos genéricos, ao invés de reescrever toda uma função podemos passar para essa função o ponteiro de outra função.
+Forma geral:
+
+Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
+
+Função que retorna ponteiro:
+
+Tipo_retornado * nome_do_ponteiro (lista_de_parâmetros)
+
+Ponteiro para função:
+Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
 
 **Alocação Dinâmica:**
 | tipo  | bytes |
@@ -298,4 +311,17 @@ int main(){
 
 ```
 register int y;
-```  
+``` 
+
+**Modificador volatile**
+
+Pode ser aplicado a qualquer declaração de variável incluindo estruturas, uniões e enumerações, informa ao compilador que aquela variável poderá ser alterada por outros meios e por esse motivo ela não deve ser otimizada, seu principal uso:
+- Sistemas dinâmicos;
+- Em tempo real;
+- Comunicação com dispositivo mapeado na memória.
+```
+volatile int x;
+```
+Uma alternativa mais eficiente seria um `type cast`.
+
+

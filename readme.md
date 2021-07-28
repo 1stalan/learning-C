@@ -2,7 +2,7 @@
 *Indice*
 
 [Introdução](source/algorithms/readme.md)
-[Variáveis]()
+[Variáveis](/source/algorithms/variables/variable.c)
 [Operadores]()
 [Controle de fluxo]()
 [Laços]()
