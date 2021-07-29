@@ -196,6 +196,28 @@ Tipo_retornado * nome_do_ponteiro (lista_de_parâmetros)
 Ponteiro para função:
 Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
 
+[**Funções com número de parâmetros variável**](/source/algorithms/funcoes/variable_parameters.c)
+
+A biblioteca `stdarg.h` possui as definições de tipos de macros necessárias para acessar a lista de parâmetros da função
+
+`va_list`: tipo usado como um parâmetro para recuperar os parâmetros adicionais da função
+
+
+`va_start(lista, ultimo_parametro)`: macro que inicializa uma variável "lista" do tipo `va_list`, com as informações necessárias para recuperar os parâmetros adicionais
+
+`va_arg(lista,tipo_dado)`: macro que retorna o parâmetro atual contido na variável "lista", do tipo `va_list`, sob a forma do tipo informado em "tipo_dado". Em seguida, a macro move a variável lista para o próximo parâmetro, se este existir.
+
+`va_end(lista)`: essa macro deve ser executada antes da finalização da função, seu objetivo é destruir a vaveial "lista" de forma adequada.
+
+*Cuidados*
+
+- Funções com quantidade variável de parâmetros não existe definição de tipo.
+
+- Não existe segurança baseada em tipo `type-safety`.
+
+- Pode-se tentar recuperar mais parâmetros do que foram passados, gerando um comportamento inesperado e corrompendo assim o funcionamento do programa.
+
+
 **Alocação Dinâmica:**
 | tipo  | bytes |
 |-------|-------|
@@ -339,4 +361,23 @@ volatile int x;
 ```
 Uma alternativa mais eficiente seria um `type cast`.
 
+**Bitfield**
 
+Tipo nome_do_campo: tamanho;
+
+Campo de bits e um tipo especial de membro de `struct` e `union` que permite gerenciar um único bit dentro de um byte sem operadores bit a bit e seu uso e mais comum quando a quantidade de memória e limitada.
+
+Só podem ser declarados como o tipo `int` utilizando os modificadoes:
+`singned int` e `unsigned int`
+
+Se ele for do tipo singned ou int seu campo deve ser maior que 1 por causa do bit de sinal.
+
+Campos de bits sem nome são úteis para tornar a estrutura adequada a um layout especificado e eles não podem ser acessados ou inicializados.
+
+Exemplos:
+- Flags
+- Comunicação com dispositivos de hardwares
+
+Os campos de bits podem ter tamanho zero para indicar que o próximo campo de bits começa no próximo byte.
+
+Campo de bits não possuem endereço então não podem ser utilizados o operador `sizeof` e nem o operador de endereço `&` e não podem ter ponteiros ou arrays de campos de bits.
