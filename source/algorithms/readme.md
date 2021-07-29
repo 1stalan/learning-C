@@ -170,6 +170,7 @@ Para acessar o valor da variável apontada por um ponteiro basta usar o operador
 *Ponteiro para função*
 
 Permite a criação de códigos genéricos, ao invés de reescrever toda uma função podemos passar para essa função o ponteiro de outra função.
+<<<<<<< HEAD
 - o nome de uma função é seu endereço na memória;
 - Um ponteiro para funções só pode apontar para funções que possuam o mesmo protótipo.
 
@@ -181,6 +182,16 @@ Função que retorna ponteiro:
 
 Tipo_retornado * nome_do_ponteiro (lista_de_parâmetros)
 
+=======
+Forma geral:
+
+Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
+
+Função que retorna ponteiro:
+
+Tipo_retornado * nome_do_ponteiro (lista_de_parâmetros)
+
+>>>>>>> 1fc73bd680ea10289490b706b151af6cedd83009
 Ponteiro para função:
 Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
 
