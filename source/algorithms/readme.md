@@ -173,6 +173,18 @@ Permite a criação de códigos genéricos, ao invés de reescrever toda uma fun
 - o nome de uma função é seu endereço na memória;
 - Um ponteiro para funções só pode apontar para funções que possuam o mesmo protótipo.
 
+
+- o nome de uma função é seu endereço na memória;
+- Um ponteiro para funções só pode apontar para funções que possuam o mesmo protótipo.
+
+Forma geral:
+
+Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
+
+Função que retorna ponteiro:
+
+Tipo_retornado * nome_do_ponteiro (lista_de_parâmetros)
+
 Forma geral:
 
 Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)

@@ -13,6 +13,3 @@
 * [Struct]()
 * [Union]()
 * [Arquivos]()
-
-
-
