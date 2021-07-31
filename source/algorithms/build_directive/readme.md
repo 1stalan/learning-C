@@ -4,15 +4,9 @@ São instruções que servem para fazer alterações no código-fonte antes de e
 `define`
 Essa diretiva informa ao compilador que ele deve procurar todas as ocorrências de determinada expressão e substitui-la por outra quando o programa for compilado e permite três sintaxes.
 
-<<<<<<< HEAD
 [#define valor](/source/build_directive/directive_define01.c)
 [#define PI 3.1415](/source/build_directive/directive_define02.c)
 [#define nomeMacro(parâmetros) expressão](/source/build_directive/directive_define03.c)
-=======
-[#define valor](/source/algorithms/build_directive/directive_define01.c)
-[#define PI 3.1415](/source/algorithms/build_directive/directive_define02.c)
-[#define nomeMacro(parâmetros) expressão](/source/algorithms/build_directive/directive_define03.c)
->>>>>>> b34028d8f8accc603bba443f1b9b96883deac61d
 
 `undef`
 Essa diretiva remove a definição de uma macro para que ela possa ser redefinida.
