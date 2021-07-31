@@ -196,7 +196,7 @@ Tipo_retornado * nome_do_ponteiro (lista_de_parâmetros)
 Ponteiro para função:
 Tipo_retornado (* nome_do_ponteiro) (lista_de_tipos)
 
-[**Funções com número de parâmetros variável**](/source/algorithms/funcoes/variable_parameters.c)
+[**Funções com número de parâmetros variável**](/source/funcoes/variable_parameters.c)
 
 A biblioteca `stdarg.h` possui as definições de tipos de macros necessárias para acessar a lista de parâmetros da função
 

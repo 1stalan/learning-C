@@ -1,8 +1,8 @@
 
 **Indice**
 
-* [Introdução](source/algorithms/readme.md)
-* [Variáveis](/source/algorithms/variables/variable.c)
+* [Introdução](source/readme.md)
+* [Variáveis](/source/variables/variable.c)
 * [Operadores]()
 * [Controle de fluxo]()
 * [Laços]()
