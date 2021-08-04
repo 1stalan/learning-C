@@ -1,7 +1,7 @@
 
 **Indice**
 
-* [Introdução](source/readme.md)
+* [Introdução](/source/readme.md)
 * [Variáveis](/source/variables/variable.c)
 * [Operadores]()
 * [Controle de fluxo]()

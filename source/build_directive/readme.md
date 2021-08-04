@@ -5,7 +5,9 @@ São instruções que servem para fazer alterações no código-fonte antes de e
 Essa diretiva informa ao compilador que ele deve procurar todas as ocorrências de determinada expressão e substitui-la por outra quando o programa for compilado e permite três sintaxes.
 
 [#define valor](/source/build_directive/directive_define01.c)
+
 [#define PI 3.1415](/source/build_directive/directive_define02.c)
+
 [#define nomeMacro(parâmetros) expressão](/source/build_directive/directive_define03.c)
 
 `undef`
