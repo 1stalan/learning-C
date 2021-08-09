@@ -94,21 +94,6 @@ int len = sizeof(vet) / sizeof(int);
 - `strcat` concatenar duas strings.
 - `strcmp` comparar duas strings.
 
-`struct` cria um tipo de variavel, tambem chamada de estrutura.
-
-- estruturas suportam atribuição, desde que sejam do mesmo tipo.
-
-`union` união é muito parecida com estrutura, a difereça é que a união é uma estrutura de memoria compartilhada, ou seja, ela armazena o campo do maior valor.
-
-- não é possivel acessar dois valores ao mesmo tempo.
-- uma união permite fazer acesso controlado a nivel de bits.
-
-`enum` uma enumeração pode ser vista como uma lista de constantes, um numero é associado a cada identificador.
-
-- pode-ser atribuir valores da tabela ASCII para a enumeração.
-
-`typedef` cria uma apelido para um tipo.
-
 
 **Funções:**
 

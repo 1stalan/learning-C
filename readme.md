@@ -10,7 +10,7 @@
 * [String]()
 * [Funções]()
 * [Ponteiros]()
-* [Struct]()
+* [Struct](/source/structs/readme.ptBR.md)
 * [Union]()
 * [Arquivos]()
 * [Manipulação de memória](/source/memory_management/readme.ptBR.md)
