@@ -155,3 +155,22 @@ Usar a biblioteca `tgmath.h` ela define uma macro do tipo genérico para cada fu
 `ccosf` para o tipo `float _Complex`
 `ccosl` para o tipo `long double _Complex`
 
+**Array de comprimento variável**
+Padrão C99 possui arrays de comprimento variável neles o tamanho pode ser especificado em tempo de execução do programa, apesar do seu tamanho ser definido em tempo de execução eles são muito diferentes de alocação dinâmica, o array está sujeito ao escopo da onde foi declarado e não é necessário liberar com a função `free`.
+
+```
+    int N;
+    printf(“Digite o tamanho do array: “);
+    scanf("%d", &N);
+    int array[N];
+```
+O padrão C99 permite declarar um array sem tamanho, chamado de “array flexível”, se ele for o último campo de uma estrutura. Exemplo:
+```
+struct aluno {
+    char nome[40];
+    int matricula;
+    int notas[]; // array flexível
+};
+```
+
+
