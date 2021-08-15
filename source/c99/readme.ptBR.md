@@ -156,6 +156,7 @@ Usar a biblioteca `tgmath.h` ela define uma macro do tipo genérico para cada fu
 `ccosl` para o tipo `long double _Complex`
 
 **Array de comprimento variável**
+
 Padrão C99 possui arrays de comprimento variável neles o tamanho pode ser especificado em tempo de execução do programa, apesar do seu tamanho ser definido em tempo de execução eles são muito diferentes de alocação dinâmica, o array está sujeito ao escopo da onde foi declarado e não é necessário liberar com a função `free`.
 
 ```
@@ -173,4 +174,65 @@ struct aluno {
 };
 ```
 
+**Funções em linha**
 
+O padrão C99 permite solicitar ao compilador faça uma expansão em linha da função, neste caso ao invés de gerar o código da função o compilador irá inserir o corpo completo da função em cada lugar do código em que a função for chamada.
+
+- Recurso de otimização;
+- Visa melhorar o tempo e uso da memória durante a execução do programa;
+- A desvantagem de talvez aumentar o tamanho final do programa gerado;
+- É um recurso normalmente utilizado para funções que executam com muita frequência.
+```
+inline tipo nome_função(parâmetros){
+sequência de declarações e comandos
+}
+```
+*Atenção*
+Funções em linha se parecem muito com funções macro, porém com a vantagem de possuir segurança baseada em tipo `type-safety`.
+
+*Restrições*
+- Não existe garantia que o compilador conseguira expandir uma função `inline` recursiva;
+- Não é adequada em funções com número de parâmetros variável;
+- Não adequada com arrays de comprimento variável;
+- Deve-se evitar o uso de `goto`;
+- Deve-se evitar o uso de funções aninhada.
+
+**Inicialização designada**
+
+Permite inicializar posições especificas de um array ou apenas alguns dos campos de uma estrutura ou união, deixando o resto das posições e dos campos sem inicializadores explícitos.
+Exemplo inicializando algumas posições do array:
+
+```
+int vetor[5] = { [2] = 10,  [4]=20 };
+```
+Podemos também definir um intervalo de posições de um array para ser inicializado com um mesmo valor com o comando.
+
+```
+int vetor [5] = { [0 . . . 1] = 10,  [2 . . .  4] = 20 };
+```
+Exemplo inicializando algumas posições de uma estrutura:
+
+```
+struct aluno {
+    int mat;
+    char nome [50];
+};
+
+struct aluno p = {.mat = 123, .nome = "Ronaldo"};
+```
+Dessa forma, mudanças na ordem dos campos ou a adição de novos campos não afetam as inicializações.
+
+**Literais compostos**
+
+Parecido cm o modelador de tipo de dados `(cast)`, seguido pelos dados da inicialização entre chaves `{}`.
+Uma variável declarada e inicializada como 
+
+```
+Tipo_variavel nome_variavel = {dados}
+```
+Terá composição literal 
+
+```
+(tipo_da_variavel) { dados };
+```
+A menos que o modificador de conversão de tipo seja definido como `const`, o conteúdo do literal composto é modificável.
