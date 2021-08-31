@@ -67,3 +67,36 @@ struct st2 { // 16 bytes
     char pad[5]; // 5 bytes
 }
 ```
+
+**Modificador volatile**
+
+Pode ser aplicado a qualquer declaração de variável incluindo estruturas, uniões e enumerações, informa ao compilador que aquela variável poderá ser alterada por outros meios e por esse motivo ela não deve ser otimizada, seu principal uso:
+- Sistemas dinâmicos;
+- Em tempo real;
+- Comunicação com dispositivo mapeado na memória.
+```
+volatile int x;
+```
+Uma alternativa mais eficiente seria um `type cast`.
+
+**Bitfield**
+
+Tipo nome_do_campo: tamanho;
+
+Campo de bits e um tipo especial de membro de `struct` e `union` que permite gerenciar um único bit dentro de um byte sem operadores bit a bit e seu uso e mais comum quando a quantidade de memória e limitada.
+
+Só podem ser declarados como o tipo `int` utilizando os modificadoes:
+`singned int` e `unsigned int`
+
+Se ele for do tipo singned ou int seu campo deve ser maior que 1 por causa do bit de sinal.
+
+Campos de bits sem nome são úteis para tornar a estrutura adequada a um layout especificado e eles não podem ser acessados ou inicializados.
+
+Exemplos:
+
+- Flags
+- Comunicação com dispositivos de hardwares
+
+Os campos de bits podem ter tamanho zero para indicar que o próximo campo de bits começa no próximo byte.
+
+Campo de bits não possuem endereço então não podem ser utilizados o operador `sizeof` e nem o operador de endereço `&` e não podem ter ponteiros ou arrays de campos de bits.

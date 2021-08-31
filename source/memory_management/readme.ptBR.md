@@ -1,3 +1,30 @@
+**Alocação Dinâmica:**
+| tipo  | bytes |
+|-------|-------|
+| char  |   1   | 
+| int   |   4   |
+| float |   4   |
+| double|   8   |  
+
+A Linguagem C ANSI usa apenas 4 funções para alocação dinâmica disponíveis na biblioteca `<stdlib.h>`.
+
+- `sizeof` retorna o número de bytes necessário para alocar um único elemento do tipo de dado recebido.
+- `malloc` a função malloc recebe por parâmetro a quantidade de bytes a ser alocada e retornar:
+ponteiro para a primeira posição do array.
+
+- `calloc` a função calloc recebe por parâmetro o número de elementos no array e o tamanho de cada elemento e retorna, a função calloc também coloca 0 em todos os bits no momento da alocação da memoria.
+
+- `realloc` a função realloc recebe por parâmetro 2 elementos o ponteiro para um bloco previamente alocado de memória, a quantidade de bytes a ser alocada
+se o ponteiro para o bloco de memória for NULL a função realloc vai alocar memoria igual a função. 
+
+- `malloc` se o tamanho solicitado de memória for igual a zero realloc ira liberar a memória da mesma forma que a função free.
+
+- `free` libera a memória.
+
+*Retorno da alocação:*
+- ponteiro para a primeira posição do array
+- NULL: caso aconteça algum erro na alocação
+
 A linguagem C possui algumas funções para manipulação de memória dentro da biblioteca `string.h`. Essas funções são:
 
 `memset`: preenche ou inicializa uma quantidade de memória (variável, estrutura, etc) com um determinado valor de bytes.
