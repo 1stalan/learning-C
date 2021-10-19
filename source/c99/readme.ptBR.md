@@ -62,8 +62,26 @@ int main()
     return 0;
 }
 ```
----TABELA LEITURA---
---- TABELA ESCRITA---
+
+**Leitura**
+
+| Tipos N = 8, 16, 32 ou 64.    | intN_t      | int_leastN_t          | int_fastN_t         | intmax_t        | intptr_t        |
+|-------------------------------|-------------|-----------------------|---------------------|-----------------|-----------------|
+| Inteiro decimal com sinal     | SCNdN SCNiN | SCNdLEASTN SCNiLEASTN | SCNdFASTN SCNiFASTN | SCNdMAX SCNiMAX | SCNdPTR SCNiPTR |
+| Inteiro decimal sem sinal     | SCNuN       | SCNuLEASTN            | SCNuFASTN           | SCNuMAX         | SCNuPTR         |
+| Inteiro octal sem sinal       | SCNoN       | SCNoLEASTN            | SCNoFASTN           | SCNoMAX         | SCNoPTR         |
+| Inteiro hexadecimal sem sinal | SCNxN       | SCNxLEASTN            | SCNxFASTN           | SCNxMAX         | SCNxPTR         |
+
+
+**Escrita**
+
+| Tipos N = 8, 16, 32 ou 64.                | intN_t       | int_leastN_t            | int_fastN_t          | intmax_t          | intptr_t          |
+|-------------------------------------------|--------------|-------------------------|----------------------|-------------------|-------------------|
+| Inteiro decimal com sinal                 | PRIdN PRINiN | PRINdLEASTN PRINiLEASTN | PRINdFASTN SCNiFASTN | PRINdMAX PRINiMAX | PRINdPTR PRINiPTR |
+| Inteiro decimal sem sinal                 | PRINuN       | PRINuLEASTN             | PRINuFASTN           | PRINuMAX          | PRINuPTR          |
+| Inteiro octal sem sinal                   | PRINoN       | PRINoLEASTN             | PRINoFASTN           | PRINoMAX          | PRINoPTR          |
+| Inteiro hexadecimal sem sinal (minúsculo) | PRINxN       | PRINxLEASTN             | PRINxFASTN           | PRINxMAX          | PRINxPTR          |
+| Inteiro hexadecimal sem sinal             | PRIXN        | PRINXLEASTN             | PRINXFASTN           | PRINXMAX          | PRINXPTR          |
 
 **Tipo booleano**
 O tipo booleano disponível na biblioteca `stdbool.h`  pode assumir dois valores.
